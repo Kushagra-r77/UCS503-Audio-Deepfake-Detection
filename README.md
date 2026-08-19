@@ -10,8 +10,11 @@ behavior across different conditions and model versions.
 The project therefore emphasizes not only the development of a working AI classifier, but also data 
 transformation, measurable evaluation, robustness testing, explainability, and deployable software 
 architecture. 
+
 The final prototype will demonstrate the complete workflow: 
+
 Audio Upload → Preprocessing → Mel-Spectrogram → Custom CNN → Real/Fake Prediction →  
 Confidence + Grad-CAM Explanation → SQL Logging 
+
 This makes the project a practical engineering system for investigating the detection of synthetic speech 
 while providing clear opportunities for experimentation, evaluation, and future expansion.
