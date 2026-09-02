@@ -1,0 +1,102 @@
+<mxfile host="app.diagrams.net" pages="2">
+  <diagram name="Level-0 Context Diagram" id="EO7eaNmngO0SBUCHF3e8">
+    <mxGraphModel dx="1202" dy="664" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="650" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="USER" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#c7e6c7;strokeColor=#2b662b;strokeWidth=2;fontStyle=1;" value="User / Security Analyst" vertex="1">
+          <mxGeometry height="60" width="180" x="40" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ENGINEER" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#c7e6c7;strokeColor=#2b662b;strokeWidth=2;fontStyle=1;" value="ML Engineer / Admin" vertex="1">
+          <mxGeometry height="60" width="180" x="40" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="P0" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#9fc5e8;strokeColor=#0b5394;strokeWidth=2;fontStyle=1;" value="0&#xa;Audio Deepfake&#xa;Detection System" vertex="1">
+          <mxGeometry height="140" width="200" x="420" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="USER" style="html=1;endArrow=block;fontStyle=0;" target="P0" value="Audio File (.wav)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="P0" style="html=1;endArrow=block;fontStyle=0;" target="USER" value="Detection Report &amp; Grad-CAM Heatmap">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="ENGINEER" style="html=1;endArrow=block;fontStyle=0;" target="P0" value="Model Configuration &amp; Weights">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="P0" style="html=1;endArrow=block;fontStyle=0;" target="ENGINEER" value="Aggregated Telemetry Logs">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="Level-1 DFD" id="ip07rvAnqMzu1jm1C8Od">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="1200" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="USER" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#c7e6c7;strokeColor=#2b662b;strokeWidth=2;fontStyle=1;" value="User / Security Analyst" vertex="1">
+          <mxGeometry height="60" width="160" x="20" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ENGINEER" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#c7e6c7;strokeColor=#2b662b;strokeWidth=2;fontStyle=1;" value="ML Engineer / Admin" vertex="1">
+          <mxGeometry height="60" width="160" x="20" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="P1" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#9fc5e8;strokeColor=#0b5394;strokeWidth=2;fontStyle=1;" value="1.0&#xa;Ingest &amp; Preprocess&#xa;Audio Sample" vertex="1">
+          <mxGeometry height="120" width="160" x="260" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="P2" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#9fc5e8;strokeColor=#0b5394;strokeWidth=2;fontStyle=1;" value="2.0&#xa;Register &amp; Load&#xa;CNN Model" vertex="1">
+          <mxGeometry height="120" width="160" x="260" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="P3" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#9fc5e8;strokeColor=#0b5394;strokeWidth=2;fontStyle=1;" value="3.0&#xa;Execute Inference&#xa;&amp; Grad-CAM Analysis" vertex="1">
+          <mxGeometry height="130" width="180" x="560" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="P4" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#9fc5e8;strokeColor=#0b5394;strokeWidth=2;fontStyle=1;" value="4.0&#xa;Generate Reports&#xa;&amp; Log Telemetry" vertex="1">
+          <mxGeometry height="130" width="180" x="900" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="D1" parent="1" style="shape=partialRectangle;whiteSpace=wrap;html=1;top=1;bottom=1;left=0;right=0;strokeWidth=2;fontStyle=1;" value="D1: Audio_Samples" vertex="1">
+          <mxGeometry height="50" width="200" x="460" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="D2" parent="1" style="shape=partialRectangle;whiteSpace=wrap;html=1;top=1;bottom=1;left=0;right=0;strokeWidth=2;fontStyle=1;" value="D2: Model_Registry" vertex="1">
+          <mxGeometry height="50" width="200" x="460" y="780" as="geometry" />
+        </mxCell>
+        <mxCell id="D3" parent="1" style="shape=partialRectangle;whiteSpace=wrap;html=1;top=1;bottom=1;left=0;right=0;strokeWidth=2;fontStyle=1;" value="D3: Inference_Telemetry" vertex="1">
+          <mxGeometry height="50" width="220" x="900" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="f1" edge="1" parent="1" source="USER" style="html=1;endArrow=block;" target="P1" value="Audio File (.wav)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f2" edge="1" parent="1" source="P1" style="html=1;endArrow=block;" target="D1" value="Validated Audio Metadata &amp; Spectrogram Path">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f3" edge="1" parent="1" source="P1" style="html=1;endArrow=block;" target="P3" value="Mel-Spectrogram Matrix">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f4" edge="1" parent="1" source="ENGINEER" style="html=1;endArrow=block;" target="P2" value="Model Configuration &amp; Weights">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f5" edge="1" parent="1" source="P2" style="html=1;endArrow=block;" target="D2" value="Model Metadata &amp; Training Accuracy">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f6" edge="1" parent="1" source="D2" style="html=1;endArrow=block;" target="P3" value="Active Model Weights">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f7" edge="1" parent="1" source="D1" style="html=1;endArrow=block;" target="P3" value="Stored Spectrogram Data">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f8" edge="1" parent="1" source="P3" style="html=1;endArrow=block;" target="P4" value="Prediction Scores &amp; Heatmap Matrix">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f9" edge="1" parent="1" source="P4" style="html=1;endArrow=block;" target="D3" value="Telemetry Record (Latency, Class, Score)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f10" edge="1" parent="1" source="D3" style="html=1;endArrow=block;" target="P4" value="Historical Performance Records">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f11" edge="1" parent="1" source="P4" style="html=1;endArrow=block;" target="USER" value="Detection Report &amp; Grad-CAM Heatmap">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f12" edge="1" parent="1" source="P4" style="html=1;endArrow=block;" target="ENGINEER" value="Aggregated Telemetry Logs">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

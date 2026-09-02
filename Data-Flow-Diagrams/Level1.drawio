@@ -1,0 +1,73 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Level-1 DFD" id="yZonf4cqDxr16i4qInZE">
+    <mxGraphModel dx="1572" dy="868" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="JzgQU6V-a2XFxohY6GJa-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#c7e6c7;strokeColor=#2b662b;strokeWidth=2;fontStyle=1;" value="User / Security Analyst" vertex="1">
+          <mxGeometry height="60" width="160" x="580" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="JzgQU6V-a2XFxohY6GJa-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#c7e6c7;strokeColor=#2b662b;strokeWidth=2;fontStyle=1;" value="ML Engineer / Admin" vertex="1">
+          <mxGeometry height="60" width="160" x="980" y="790" as="geometry" />
+        </mxCell>
+        <mxCell id="JzgQU6V-a2XFxohY6GJa-3" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#9fc5e8;strokeColor=#0b5394;strokeWidth=2;fontStyle=1;" value="1.0&#xa;Ingest &amp; Preprocess&#xa;Audio Sample" vertex="1">
+          <mxGeometry height="120" width="160" x="90" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="JzgQU6V-a2XFxohY6GJa-4" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#9fc5e8;strokeColor=#0b5394;strokeWidth=2;fontStyle=1;" value="2.0&#xa;Register &amp; Load&#xa;CNN Model" vertex="1">
+          <mxGeometry height="120" width="160" x="90" y="760" as="geometry" />
+        </mxCell>
+        <mxCell id="JzgQU6V-a2XFxohY6GJa-5" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#9fc5e8;strokeColor=#0b5394;strokeWidth=2;fontStyle=1;" value="3.0&#xa;Execute Inference&#xa;&amp; Grad-CAM Analysis" vertex="1">
+          <mxGeometry height="130" width="180" x="80" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="JzgQU6V-a2XFxohY6GJa-6" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#9fc5e8;strokeColor=#0b5394;strokeWidth=2;fontStyle=1;" value="4.0&#xa;Generate Reports&#xa;&amp; Log Telemetry" vertex="1">
+          <mxGeometry height="130" width="180" x="570" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="JzgQU6V-a2XFxohY6GJa-7" parent="1" style="shape=partialRectangle;whiteSpace=wrap;html=1;top=1;bottom=1;left=0;right=0;strokeWidth=2;fontStyle=1;" value="D1: Audio_Samples" vertex="1">
+          <mxGeometry height="50" width="200" x="330" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="JzgQU6V-a2XFxohY6GJa-8" parent="1" style="shape=partialRectangle;whiteSpace=wrap;html=1;top=1;bottom=1;left=0;right=0;strokeWidth=2;fontStyle=1;" value="D2: Model_Registry" vertex="1">
+          <mxGeometry height="50" width="200" x="70" y="605" as="geometry" />
+        </mxCell>
+        <mxCell id="JzgQU6V-a2XFxohY6GJa-9" parent="1" style="shape=partialRectangle;whiteSpace=wrap;html=1;top=1;bottom=1;left=0;right=0;strokeWidth=2;fontStyle=1;" value="D3: Inference_Telemetry" vertex="1">
+          <mxGeometry height="50" width="220" x="550" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="JzgQU6V-a2XFxohY6GJa-10" edge="1" parent="1" source="JzgQU6V-a2XFxohY6GJa-1" style="html=1;endArrow=block;" target="JzgQU6V-a2XFxohY6GJa-3" value="Audio File (.wav)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JzgQU6V-a2XFxohY6GJa-11" edge="1" parent="1" source="JzgQU6V-a2XFxohY6GJa-3" style="html=1;endArrow=block;" target="JzgQU6V-a2XFxohY6GJa-7" value="Validated Audio Metadata &amp; Spectrogram Path">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JzgQU6V-a2XFxohY6GJa-12" edge="1" parent="1" source="JzgQU6V-a2XFxohY6GJa-3" style="html=1;endArrow=block;" target="JzgQU6V-a2XFxohY6GJa-5" value="Mel-Spectrogram Matrix">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JzgQU6V-a2XFxohY6GJa-13" edge="1" parent="1" source="JzgQU6V-a2XFxohY6GJa-2" style="html=1;endArrow=block;" target="JzgQU6V-a2XFxohY6GJa-4" value="Model Configuration &amp; Weights">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JzgQU6V-a2XFxohY6GJa-14" edge="1" parent="1" source="JzgQU6V-a2XFxohY6GJa-4" style="html=1;endArrow=block;" target="JzgQU6V-a2XFxohY6GJa-8" value="Model Metadata &amp; Training Accuracy">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JzgQU6V-a2XFxohY6GJa-15" edge="1" parent="1" source="JzgQU6V-a2XFxohY6GJa-8" style="html=1;endArrow=block;" target="JzgQU6V-a2XFxohY6GJa-5" value="Active Model Weights">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JzgQU6V-a2XFxohY6GJa-16" edge="1" parent="1" source="JzgQU6V-a2XFxohY6GJa-7" style="html=1;endArrow=block;" target="JzgQU6V-a2XFxohY6GJa-5" value="Stored Spectrogram Data">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JzgQU6V-a2XFxohY6GJa-17" edge="1" parent="1" source="JzgQU6V-a2XFxohY6GJa-5" style="html=1;endArrow=block;" target="JzgQU6V-a2XFxohY6GJa-6" value="Prediction Scores &amp; Heatmap Matrix">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JzgQU6V-a2XFxohY6GJa-18" edge="1" parent="1" source="JzgQU6V-a2XFxohY6GJa-6" style="html=1;endArrow=block;" target="JzgQU6V-a2XFxohY6GJa-9" value="Telemetry Record (Latency, Class, Score)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JzgQU6V-a2XFxohY6GJa-19" edge="1" parent="1" source="JzgQU6V-a2XFxohY6GJa-9" style="html=1;endArrow=block;" target="JzgQU6V-a2XFxohY6GJa-6" value="Historical Performance Records">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JzgQU6V-a2XFxohY6GJa-20" edge="1" parent="1" source="JzgQU6V-a2XFxohY6GJa-6" style="html=1;endArrow=block;" target="JzgQU6V-a2XFxohY6GJa-1" value="Detection Report &amp; Grad-CAM Heatmap">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JzgQU6V-a2XFxohY6GJa-21" edge="1" parent="1" source="JzgQU6V-a2XFxohY6GJa-6" style="html=1;endArrow=block;" target="JzgQU6V-a2XFxohY6GJa-2" value="Aggregated Telemetry Logs">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
